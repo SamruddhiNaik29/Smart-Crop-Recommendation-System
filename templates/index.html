@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('static/plant.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .content-box {
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 60px;
+            border-radius: 30px;
+            text-align: center;
+            height: 1000px;
+            width: 1000px;
+        }
+
+        h1 {
+            color: #007bff; /* Primary blue color for headings */
+            font-size: 5.5em;
+        }
+
+        p {
+            color: #4b0a0a; /* Dark gray text color */
+            font-size: 3.5em;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a {
+            text-decoration: none;
+            color: #28a745; /* Success green color for links */
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #218838; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <div class="content-box">
+        <h1>Smart Crop Recommendation System</h1>
+        
+        <p><a href="{{ url_for('login') }}">Login</a></p>
+        <p><a href="{{ url_for('register') }}">Register</a></p>
+        <p>Find out the most suitable crop to grow in your farm </p>
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url('static/plant.jpg'); /* Replace 'path/to/your/background-image.jpg' with the actual path to your image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #007bff; /* Primary blue color for headings */
+            font-size: 5em;
+        }
+
+        form {
+            display: inline-block;
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff; /* White background color for the form */
+            border-radius: 10px; /* Rounded corners for the form */
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+            height: 700px;
+            width: 900px;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            color: #495057; /* Dark gray color for labels */
+            font-weight: bold;
+            font-size: 2em;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ced4da; /* Light gray border color */
+            border-radius: 5px; /* Rounded corners for form elements */
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #28a745; /* Success green color for buttons */
+            color: #fff; /* White text color */
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px; /* Rounded corners for buttons */
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Feedback</h1>
+    <form method="post" action="{{ url_for('feedback') }}">
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" required><br>
+
+        <label for="contact">Contact Number:</label>
+        <input type="text" name="contact" required><br>
+
+        <label for="email">Your Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="feedback">Your Feedback:</label>
+        <textarea name="feedback" rows="4" cols="50" required></textarea><br>
+
+        <button type="submit">Submit Feedback</button>
+    </form>
+</body>
+</html>
